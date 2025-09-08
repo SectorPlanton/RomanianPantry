@@ -9,76 +9,150 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-      /* Navbar links */
-      .nav-link {
-        color: #415dbb !important;
-        font-weight: 600;
-      }
-      .nav-link.active,
-      .nav-link:hover {
-        color: #459b87 !important;
-      }
+  /* Navbar links */
+  .nav-link {
+    color: #415dbb !important;
+    font-weight: 600;
+  }
+  .nav-link.active,
+  .nav-link:hover {
+    color: #459b87 !important;
+  }
 
-      /* Dropdown menu */
-      .dropdown-menu {
-        background-color: #F4F8D3;
-      }
-      .dropdown-item {
-        color: #333;
-      }
-      .dropdown-item:hover {
-        background-color: #A6F1E0;
-        color: #000;
-      }
+  /* Dropdown menu */
+  .dropdown-menu {
+    background-color: #F4F8D3;
+  }
+  .dropdown-item {
+    color: #333;
+  }
+  .dropdown-item:hover {
+    background-color: #A6F1E0;
+    color: #000;
+  }
 
-      /* Buttons */
-      .btn-primary {
-        background-color: #415dbb;
-        border: none;
-      }
-      .btn-primary:hover {
-        background-color: #459b87;
-        color: #000;
-      }
-      .btn-outline-success {
-        border-color: #415dbb;
-        color: #415dbb;
-      }
-      .btn-outline-success:hover {
-        background-color: #A6F1E0;
-        border-color: #A6F1E0;
-        color: #000;
-      }
+  /* Buttons */
+  .btn-primary {
+    background-color: #415dbb;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #459b87;
+    color: #000;
+  }
+  .btn-outline-success {
+    border-color: #415dbb;
+    color: #415dbb;
+  }
+  .btn-outline-success:hover {
+    background-color: #A6F1E0;
+    border-color: #A6F1E0;
+    color: #000;
+  }
 
-      /* Carousel captions */
-      .carousel-caption h1 {
-        color: #415dbb;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-      }
-      .carousel-caption p {
-        color: #ee4419;
-        font-weight: 700;
-      }
+  /* Carousel captions */
+  .carousel-item h1 {
+    color: #415dbb;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  }
+  .carousel-item p {
+    color: #ee4419;
+    font-weight: 700;
+  }
 
-      /* Section titles */
-      .section-title {
-        color: #415dbb;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        text-align: center;
-      }
+  /* Section titles */
+  .section-title {
+    color: #415dbb;
+    font-weight: 700;
+    margin-bottom: 3rem; /* mai mult spațiu sub titlu */
+    text-align: center;
+  }
 
-      .brand-logo {
-        max-height: 80px;
-        object-fit: contain;
-        filter: grayscale(30%);
-        transition: all 0.3s ease;
-      }
-      .brand-logo:hover {
-        filter: grayscale(0%);
-        transform: scale(1.05);
-      }
-    </style>
+  /* Brand logos */
+  .brand-logo {
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+  }
+  .brand-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  /* Extra Box */
+.extra-box {
+  position: absolute;
+  bottom: 20px;            /* poziție de bază */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  min-height: auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Poziționare slide */
+.caption-left {
+  left: 20px;
+  right: auto;
+  text-align: left;
+}
+
+.caption-center {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.caption-right {
+  right: 20px;
+  left: auto;
+  text-align: right;
+}
+
+/* Responsive tabletă */
+@media (max-width: 768px) {
+  .extra-box {
+    bottom: 15px;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+/* Responsive mobil */
+@media (max-width: 576px) {
+  .extra-box {
+    bottom: 10px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+  /* ===== SPAȚIERE ÎNTRE SECTIUNI ===== */
+  nav.navbar {
+    margin-bottom: 3rem; /* spațiu între navbar și hero */
+  }
+  section {
+    padding-bottom: 5rem; /* spațiu dedesubt */
+  }
+  footer {
+    margin-top: 5rem; /* spațiu mare între ultima secțiune și footer */
+  }
+</style>
+
   </head>
   <body>
 
@@ -123,59 +197,64 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section>
-      <div id="myCarousel" class="carousel slide mt-0" data-bs-ride="carousel"> 
-        <div class="carousel-indicators"> 
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"></button> 
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></button> 
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button> 
-        </div> 
-        <div class="carousel-inner"> 
-          <div class="carousel-item"> 
-            <img src="images/backgroundhero.png" class="d-block w-100" alt="Best Sellers"> 
-            <div class="container"> 
-              <div class="carousel-caption text-start"> 
-                <h1>Best Sellers</h1> 
-                <p>✨ Save 10% On Orders over $175 ✨</p> 
-                <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p> 
-              </div> 
-            </div> 
-          </div> 
-          <div class="carousel-item active"> 
-            <img src="images/backgroundhero2.png" class="d-block w-100" alt="Shop by Brand"> 
-            <div class="container"> 
-              <div class="carousel-caption"> 
-                <h1>Shop by Brand</h1> 
-                <p>✨ Save 10% On Orders over $175 ✨</p> 
-                <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p> 
-              </div> 
-            </div> 
-          </div> 
-          <div class="carousel-item"> 
-            <img src="images/backgroundhero3.png" class="d-block w-100" alt="Shop by Category"> 
-            <div class="container"> 
-              <div class="carousel-caption text-end"> 
-                <h1>Shop by Category</h1> 
-                <p>✨ Save 10% On Orders over $175 ✨</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Browse Categories</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">    
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
+   <!-- Hero Section -->
+   <section class="">
+     <div id="myCarousel" class="carousel slide mt-0" data-bs-ride="carousel"> 
+       <div class="carousel-indicators"> 
+         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"></button> 
+         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></button> 
+         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button> 
+       </div> 
+       <div class="carousel-inner"> 
+         
+         
+         
+         <!-- Slide 1 -->
+<div class="carousel-item"> 
+  <img src="images/backgroundhero.png" class="d-block w-100" alt="Best Sellers"> 
+  <div class="extra-box caption-left">
+    <h1>Best Sellers</h1> 
+    <p>✨ Save 10% On Orders over $175 ✨</p> 
+    <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p> 
+  </div>
+</div> 
+
+<!-- Slide 2 -->
+<div class="carousel-item active"> 
+  <img src="images/backgroundhero2.png" class="d-block w-100" alt="Shop by Brand"> 
+  <div class="extra-box caption-center">
+    <h1>Shop by Brand</h1> 
+    <p>✨ Save 10% On Orders over $175 ✨</p> 
+    <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p> 
+  </div>
+</div> 
+
+<!-- Slide 3 -->
+<div class="carousel-item"> 
+  <img src="images/backgroundhero3.png" class="d-block w-100" alt="Shop by Category"> 
+  <div class="extra-box caption-right">
+    <h1>Shop by Category</h1> 
+    <p>✨ Save 10% On Orders over $175 ✨</p>
+    <p><a class="btn btn-lg btn-primary" href="#">Browse Categories</a></p>
+  </div>
+</div>
+
+
+       </div>
+
+       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon"></span>
+         <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">    
+         <span class="carousel-control-next-icon"></span>
+         <span class="visually-hidden">Next</span>
+       </button>
+     </div>
+   </section>
 
     <!-- Best Sellers Section -->
-    <section class="py-5 bg-light">
+    <section class="bg-light">
       <div class="container">
         <h2 class="section-title">Best Sellers</h2>
         <div class="row g-4">
@@ -224,7 +303,7 @@
     </section>
 
     <!-- Shop by Brand Section -->
-    <section class="py-5">
+    <section>
       <div class="container">
         <h2 class="section-title">Shop by Brand</h2>
         <div class="row text-center g-4">
@@ -245,8 +324,8 @@
     </section>
 
     <!--Footer-->
-    <footer class="py-5"> 
-      <div class="row"> 
+    <footer> 
+      <div class="row px-4"> 
         <div class="col-6 col-md-2 mb-3"> 
           <h5>Section</h5> 
           <ul class="nav flex-column"> 
@@ -289,7 +368,7 @@
           </form> 
         </div> 
       </div> 
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> 
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top px-4"> 
         <p>Romanian Pantry © 2025, Inc. All rights reserved.</p> 
         <ul class="list-unstyled d-flex"> 
           <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li> 
@@ -301,3 +380,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
