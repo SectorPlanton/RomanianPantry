@@ -8,150 +8,165 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-  /* Navbar links */
-  .nav-link {
-    color: #415dbb !important;
-    font-weight: 600;
-  }
-  .nav-link.active,
-  .nav-link:hover {
-    color: #459b87 !important;
-  }
+   <style>
+      /* Navbar links */
+      .nav-link {
+        color: #415dbb !important;
+        font-weight: 600;
+      }
+      .nav-link.active,
+      .nav-link:hover {
+        color: #459b87 !important;
+      }
 
-  /* Dropdown menu */
-  .dropdown-menu {
-    background-color: #F4F8D3;
-  }
-  .dropdown-item {
-    color: #333;
-  }
-  .dropdown-item:hover {
-    background-color: #A6F1E0;
-    color: #000;
-  }
+      /* Dropdown menu */
+      .dropdown-menu {
+        background-color: #F4F8D3;
+      }
+      .dropdown-item {
+        color: #333;
+      }
+      .dropdown-item:hover {
+        background-color: #A6F1E0;
+        color: #000;
+      }
 
-  /* Buttons */
-  .btn-primary {
-    background-color: #415dbb;
-    border: none;
-  }
-  .btn-primary:hover {
-    background-color: #459b87;
-    color: #000;
-  }
-  .btn-outline-success {
-    border-color: #415dbb;
-    color: #415dbb;
-  }
-  .btn-outline-success:hover {
-    background-color: #A6F1E0;
-    border-color: #A6F1E0;
-    color: #000;
-  }
+      /* Buttons */
+      .btn-primary {
+        background-color: #415dbb;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #459b87;
+        color: #000;
+      }
+      .btn-outline-success {
+        border-color: #415dbb;
+        color: #415dbb;
+      }
+      .btn-outline-success:hover {
+        background-color: #A6F1E0;
+        border-color: #A6F1E0;
+        color: #000;
+      }
 
-  /* Carousel captions */
-  .carousel-item h1 {
-    color: #415dbb;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  }
-  .carousel-item p {
-    color: #ee4419;
-    font-weight: 700;
-  }
+      /* Carousel captions */
+      .carousel-item h1 {
+        color: #415dbb;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      }
+      .carousel-item p {
+        color: #ee4419;
+        font-weight: 700;
+      }
 
-  /* Section titles */
-  .section-title {
-    color: #415dbb;
-    font-weight: 700;
-    margin-bottom: 3rem; /* mai mult spațiu sub titlu */
-    text-align: center;
-  }
+      /* Section titles */
+      .section-title {
+        color: #415dbb;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
 
-  /* Brand logos */
-  .brand-logo {
-    max-height: 80px;
-    object-fit: contain;
-    filter: grayscale(30%);
-    transition: all 0.3s ease;
-  }
-  .brand-logo:hover {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
+      /* Brand logos */
+      .brand-logo {
+        max-height: 80px;
+        object-fit: contain;
+        filter: grayscale(30%);
+        transition: all 0.3s ease;
+      }
+      .brand-logo:hover {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+      }
 
-  /* Extra Box */
-.extra-box {
-  position: absolute;
-  bottom: 20px;            /* poziție de bază */
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 1.5rem;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  min-height: auto;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  box-sizing: border-box;
-}
+      /* Extra Box */
+      .extra-box {
+        position: absolute;
+        bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 1.5rem;
+        border-radius: 12px;
+        max-width: 400px;
+        width: 90%;
+        min-height: auto;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+      }
 
-/* Poziționare slide */
-.caption-left {
-  left: 20px;
-  right: auto;
-  text-align: left;
-}
+      /* Poziționare slide */
+      .caption-left {
+        left: 20px;
+        right: auto;
+        text-align: left;
+      }
 
-.caption-center {
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
+      .caption-center {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
 
-.caption-right {
-  right: 20px;
-  left: auto;
-  text-align: right;
-}
+      .caption-right {
+        right: 20px;
+        left: auto;
+        text-align: right;
+      }
 
-/* Responsive tabletă */
-@media (max-width: 768px) {
-  .extra-box {
-    bottom: 15px;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%);
-    width: 95%;
-    padding: 1rem;
-  }
-}
+      /* Carousel item position fix */
+      .carousel-item {
+        position: relative;
+      }
 
-/* Responsive mobil */
-@media (max-width: 576px) {
-  .extra-box {
-    bottom: 10px;
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-}
+      .carousel-item img {
+        object-fit: cover;
+        height: 100vh;
+      }
 
+      /* Responsive tabletă */
+      @media (max-width: 768px) {
+        .carousel-item img {
+          height: 75vh;
+        }
+        .extra-box {
+          bottom: 15px;
+          left: 50% !important;
+          right: auto !important;
+          transform: translateX(-50%);
+          width: 95%;
+          padding: 1rem;
+        }
+      }
 
+      /* Responsive mobil */
+      @media (max-width: 576px) {
+        .extra-box {
+          bottom: auto;
+          top: 55%;
+          left: 50% !important;
+          right: auto !important;
+          transform: translate(-50%, -50%);
+          width: 95%;
+          padding: 1rem;
+          font-size: 0.9rem;
+        }
+      }
 
-
-  /* ===== SPAȚIERE ÎNTRE SECTIUNI ===== */
-  nav.navbar {
-    margin-bottom: 3rem; /* spațiu între navbar și hero */
-  }
-  section {
-    padding-bottom: 5rem; /* spațiu dedesubt */
-  }
-  footer {
-    margin-top: 5rem; /* spațiu mare între ultima secțiune și footer */
-  }
-</style>
+      /* Spațiere între secțiuni */
+      nav.navbar {
+        margin-bottom: 3rem;
+      }
+      section {
+        padding-bottom: 5rem;
+      }
+      footer {
+        margin-top: 5rem;
+      }
+    </style>
 
   </head>
   <body>
